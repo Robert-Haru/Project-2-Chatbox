@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import configData from "./firebase-config.json";
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -9,15 +10,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBGrGHscXx6yvOXWav2H011_TusUyPz9JU",
-  authDomain: "chatbox-72919.firebaseapp.com",
-  projectId: "chatbox-72919",
-  storageBucket: "chatbox-72919.appspot.com",
-  messagingSenderId: "343531610502",
-  appId: "1:343531610502:web:f92b1ac9360da985900c07",
-  measurementId: "G-MD1WNCCYD7" 
-})
+firebase.initializeApp(configData);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
