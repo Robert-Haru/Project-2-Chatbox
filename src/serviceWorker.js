@@ -127,7 +127,9 @@ export function register(config) {
   }
 }
 export function unregister() {
-  if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigato
+  
+  r) {
     navigator.serviceWorker.ready
       .then((registration) => {
         registration.unregister();
